@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 6vh;
 }
 
 .header__left {
@@ -13,13 +14,18 @@
   img {
     object-fit: contain;
     width: 30px;
+    transition: 0.1s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: translate(2px, -2px);
+    }
   }
   h3 {
     color: white;
     font-weight: 600;
     margin-left: 20px;
     &:hover {
-      color: #5c16c5;
+      color: #ab73ff;
       cursor: pointer;
     }
   }
@@ -41,13 +47,28 @@
 
   input {
     padding: 10px;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(68, 68, 68);
     border: 1px solid rgb(51, 51, 51);
-    border-radius: 10px;
+    border-radius: 6px;
+    min-width: 300px;
+    &:focus {
+      outline: none;
+      border: 2px solid #9046ff;
+    }
+    &::placeholder {
+      color: rgb(202, 202, 202);
+    }
   }
   .MuiSvgIcon-root {
     color: white;
+    padding: 6px;
     margin-left: 10px;
+    border-radius: 6px;
+    background-color: rgb(68, 68, 68);
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(90, 90, 90);
+    }
   }
 }
 
@@ -73,9 +94,9 @@
     }
   }
   .header__right_btn2 {
-    background-color: #5c16c5;
+    background-color: #9147ff;
     &:hover {
-      background-color: #4f0eb1;
+      background-color: #762ce4;
       cursor: pointer;
     }
   }
@@ -87,5 +108,41 @@
       background-color: rgb(59, 59, 59);
       border-radius: 8px;
     }
+  }
+}
+
+.header__right_notification {
+  display: flex;
+  align-items: center;
+  span {
+    font-weight: bold;
+    font-size: 12px;
+    background-color: red;
+    padding: 1px 5px;
+    border-radius: 50px;
+    position: absolute;
+    right: 200px;
+    top: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__middle {
+    display: none;
+  }
+  .header__left {
+    h3 {
+      display: none;
+    }
+  }
+  .header__right {
+    .MuiSvgIcon-root {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__right_notification {
+    display: none;
   }
 }

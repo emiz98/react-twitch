@@ -1,5 +1,24 @@
 .mainBody {
-  background-color: #202020;
-  min-height: 100vh;
+  background-color: black;
+  min-height: 88vh;
+  height: 88vh;
   flex: 1;
+  padding: 30px;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 1px solid rgba(109, 109, 109, 0.74);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainBody {
+    padding: 0px;
+  }
 }

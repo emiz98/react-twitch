@@ -1,0 +1,54 @@
+.categoryCard {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: blueviolet;
+  width: 40%;
+  padding: 0 20px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  font-size: 20px;
+
+  &:hover {
+    background-color: rgb(157, 79, 231);
+    cursor: pointer;
+  }
+
+  .ico {
+    height: 70px;
+    img {
+      position: relative;
+      top: -15px;
+      right: 0;
+      width: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .categoryCard {
+    width: 35%;
+    h2 {
+      font-size: 20px;
+    }
+    .ico {
+      img {
+        width: 60px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .categoryCard {
+    width: 20%;
+    h2 {
+      font-size: 24px;
+    }
+    .ico {
+      img {
+        width: 70px;
+      }
+    }
+  }
+}

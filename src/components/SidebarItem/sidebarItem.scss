@@ -3,6 +3,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(46, 46, 46);
+  }
 }
 .sidebar_left {
   display: flex;
@@ -11,23 +15,27 @@
     margin-left: 10px;
     h4 {
       font-weight: 600;
+      width: 125px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     span {
-      font-size: 14px;
+      font-size: 13px;
       color: rgb(190, 190, 190);
     }
   }
   .MuiAvatar-root {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
   }
 }
 .sidebar__right {
   display: flex;
   align-items: center;
   .dot {
-    height: 12px;
-    width: 12px;
+    height: 10px;
+    width: 10px;
     background-color: rgb(246, 0, 0);
     border-radius: 50%;
     display: inline-block;
@@ -36,5 +44,12 @@
     margin-left: 5px;
     font-weight: 400;
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar__right,
+  .sidebar__content {
+    display: none;
   }
 }

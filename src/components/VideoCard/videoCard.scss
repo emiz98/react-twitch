@@ -1,10 +1,27 @@
 .videoCard {
+  padding-right: 15px;
+  width: 48%;
+  padding: 1%;
+}
+.small_card {
+  width: 11% !important;
+  padding: 5px !important;
+  .videoCard__footer {
+    min-height: 0 !important;
+  }
 }
 .videoCard__thumbnail {
   position: relative;
   color: white;
+  transition: 0.12s ease-in-out;
+  // max-width: 350px;
+  &:hover {
+    transform: translate(5px, -5px);
+    cursor: pointer;
+    box-shadow: -5px 5px blueviolet;
+  }
   img {
-    width: 350px;
+    width: 100%;
   }
   span {
     position: absolute;
@@ -22,20 +39,64 @@
 
 .videoCard__footer {
   margin-top: 5px;
+  // max-width: 320px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: flex;
   align-items: flex-start;
   color: white;
-
+  min-height: 110px;
+  .MuiAvatar-root {
+    margin: 5px;
+  }
   .videoCard__content {
     margin-left: 10px;
+    h4:hover,
+    div:hover {
+      color: rgb(173, 101, 240);
+      cursor: pointer;
+    }
   }
-  .subtitles {
-    color: rgb(163, 163, 163);
+  .subtitles2 {
+    color: rgb(151, 151, 151);
+    margin-bottom: 10px;
   }
   .lang {
-    color: rgb(182, 182, 182);
-    background-color: rgb(63, 63, 63);
-    padding: 2px 10px;
-    border-radius: 10px;
+    color: #b6b6b6;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 50px;
+    background-color: #3f3f3f;
+    padding: 2px 10px 4px 10px;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: rgb(77, 77, 77);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .videoCard {
+    width: 70%;
+    margin: 5px;
+    background-color: rgba(26, 26, 26, 0.842);
+  }
+  .small_card {
+    min-width: 150px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .videoCard {
+    width: 48%;
+    padding: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .videoCard {
+    width: 24%;
+    padding: 5px;
   }
 }

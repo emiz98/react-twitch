@@ -19,7 +19,10 @@ const Header = () => {
         <Search />
       </div>
       <div className="header__right">
-        <Notifications />
+        <div className="header__right_notification">
+          <Notifications />
+          <span>5</span>
+        </div>
         <div className="header__right_btn1">Log In</div>
         <div className="header__right_btn2">Sign Up</div>
         <PersonOutline />

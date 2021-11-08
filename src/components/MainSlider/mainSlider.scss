@@ -1,0 +1,138 @@
+.mainSlider {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  min-height: 40vh;
+  //   overflow: hidden;
+}
+
+.slick-center .live {
+  color: white;
+  padding: 2px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px;
+  background-color: red;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.sliderCard {
+  img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px !important;
+    filter: brightness(0.3) blur(2px);
+    transition: 0.2s ease-in-out;
+    position: relative;
+    z-index: 95;
+    top: 25px;
+  }
+  &:hover {
+    cursor: pointer;
+    > img {
+      height: 210px !important;
+      filter: brightness(0.6) blur(0px);
+    }
+  }
+}
+
+.slick-active {
+  width: 160px !important;
+  .sliderCard > img {
+    height: 270px !important;
+    filter: brightness(0.5) blur(1px);
+    position: relative;
+    z-index: 98;
+    top: 15px;
+    transition: 0.2s ease-in-out;
+  }
+  &:hover {
+    .sliderCard > img {
+      height: 285px !important;
+      filter: brightness(0.8) blur(0px);
+    }
+  }
+}
+.slick-center {
+  .sliderCard > img {
+    height: 300px !important;
+    position: relative;
+    z-index: 99;
+    top: 0;
+    filter: brightness(1);
+  }
+  &:hover {
+    .sliderCard > img {
+      height: 300px !important;
+      filter: brightness(1);
+    }
+  }
+}
+
+.slick-list {
+  padding: 0 130px !important;
+  margin: 0 0%;
+}
+
+.slider_buttons {
+  position: absolute;
+  color: white;
+  z-index: 999;
+  top: 40%;
+  .MuiSvgIcon-root {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: rgb(61, 61, 61);
+    }
+  }
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .mainSlider {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slick-list {
+    padding: 0 60px !important;
+    margin: 0 !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .slick-list {
+    padding: 0 16% !important;
+    margin: 0 !important;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .slick-list {
+    padding: 0 6% !important;
+    margin: 0 10% !important;
+  }
+  .mainSlider {
+    min-height: 45vh;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .slick-list {
+    padding: 0 8% !important;
+    margin: 0 15% !important;
+  }
+  .mainSlider {
+    min-height: 40vh;
+  }
+}
